@@ -5,3 +5,7 @@
 .container div {
   border: 1px solid green;
 }
+
+.container div, div[class*="b329"] {
+  font-weight: bold;
+}
