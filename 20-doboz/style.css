@@ -1,0 +1,30 @@
+body {
+  display: inline-flex;
+  flex-flow: column wrap;
+  gap: 12px;
+}
+
+.frame {
+  border: solid 2px #4285F4;
+  display: flex;
+  padding: 24px;
+  gap: 16px;
+}
+
+.frame div {
+  width: 50px;
+  height: 50px;
+  /*flex-basis: fit-content;*/
+}
+
+#down {
+  background-color: #FF6347;
+}
+
+#up div {
+  background-color: #4285F4;
+}
+
+#down div {
+  background-color: #643579;
+}
