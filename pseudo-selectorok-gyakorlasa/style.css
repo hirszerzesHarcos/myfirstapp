@@ -1,0 +1,17 @@
+div {
+  border: 1px solid black;
+  width: 400px;
+  margin: auto;
+}
+
+div:hover {
+  background-color: rgb(180, 96, 63);
+}
+
+div:first-of-type {
+  border-top-width: 0;
+}
+
+div:last-of-type {
+  border-bottom-width: 0;
+}
