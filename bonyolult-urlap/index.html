@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bonyolult űrlap</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <fieldset>
+    <legend>Érdekes alkalmazás űrlap &#x1f644</legend>
+    <fieldset>
+      <legend>Mi a neved?</legend>
+      <input type="text" name="name">
+    </fieldset>
+    <fieldset>
+      <legend>Mi a kedvenc szined?</legend>
+      <input type="checkbox" id="favColor1" name="favColor1" value="red">
+      <label for="favColor1"> Piros</label><br>
+      <input type="checkbox" id="favColor2" name="favColor2" value="green">
+      <label for="favColor2"> Zöld</label><br>
+      <input type="checkbox" id="favColor3" name="favColor3" value="blue">
+      <label for="favColor3"> Kék</label><br>
+      <input type="checkbox" id="favColor4" name="favColor4" value="other">
+      <label for="favColor4" > Egyéb</label>
+      <input type="text" name="favOtherColor">
+    </fieldset>
+    <fieldset>
+      <legend>Szeretnél fejlesztő lenni?</legend>
+      <input type="radio" name="developer" id="devYes" value="yes">
+      <label for="devYes">Yes</label><br>
+      <input type="radio" name="developer" id="devAno" value="ano">
+      <label for="devAno">Ano</label><br>
+      <input type="radio" name="developer" id="devIgen" value="igen">
+      <label for="devIgen">Igen</label><br>
+      <input type="radio" name="developer" id="devShi" value="shi">
+      <label for="devShi">是</label>
+    </fieldset>
+    <fieldset>
+      <legend>Miért szeretnél fejlesztő lenni?</legend>
+      <textarea name="whyDeveloper" rows="5" cols="20"></textarea>
+    </fieldset>
+    <input type="submit" value="Küldés">
+  </fieldset>
+</main>
+<!-- partial -->
+  
+</body>
+</html>

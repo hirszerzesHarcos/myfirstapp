@@ -1,0 +1,23 @@
+h1 {
+  color: tomato;
+}
+
+h2 {
+  color: purple;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.colored {
+  color: PaleVioletRed;
+}
+
+.underLined {
+  text-decoration-line: underline;
+}

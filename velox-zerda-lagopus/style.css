@@ -1,0 +1,11 @@
+p {
+  font-family: 'Original Surfer', cursive;
+  font-size: 2em;
+  background-color: #0D91A1;
+  color: #015668;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  border: 5px solid #7DCE94;
+}

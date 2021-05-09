@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-wrap: wrap;
+  background-color: purple;
+  height: 70px;
+  align-items: center;
+}
+
+nav a {
+  margin: 10px;
+  display: block;
+  background-color: cyan;
+  width: 10%;
+  height: 30px;
+}
+
+a#double {
+  width: 15%;
+}
+
+section {
+  margin: 80px 100px 10px 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+main {
+  flex-grow: 4;
+  background-color: yellow;
+  height: 500px;
+}
+
+aside {
+  flex-grow: 1;
+  background-color: lime;
+  height: 500px;
+}
+
+footer {
+  background-color: grey;
+  height: 80px;
+  margin: 0 100px;
+}

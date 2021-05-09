@@ -1,0 +1,28 @@
+main {
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size 16px;
+  font-weight: 600;
+}
+
+label, input {
+  display: block;
+}
+
+label, #submit{
+  text-transform: uppercase;
+}
+
+input {
+  border: solid 2px lime;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#submit {
+  font-weight: inherit;
+  padding: 5px;
+  background-color: lime;
+  border: 2px solid lime;
+  border-radius: 13px;
+}
