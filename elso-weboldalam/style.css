@@ -92,7 +92,7 @@ blockquote::before {
 }
 
 main h2 {
-  font-famili: 'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 24px;
@@ -101,7 +101,7 @@ main h2 {
 }
 
 main h3 {
-  font-famili: 'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 36px;
@@ -117,3 +117,6 @@ main section p{
   line-height: 24px;
   /*letter-spacing: 0.2px;*/
 }
+
+/*font-family: 'Merriweather', serif;
+  font-family: 'Abril Fatface', cursive;*/
