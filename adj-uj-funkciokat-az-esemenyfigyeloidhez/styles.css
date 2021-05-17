@@ -1,0 +1,3 @@
+button:not([value="3"]) {
+  display: block;
+}
