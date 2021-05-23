@@ -1,4 +1,4 @@
-body {
+ body {
   background-color: #58E2C2;
   font-family: 'Roboto', sans-serif;
   color: #B8B8B8;
@@ -23,24 +23,26 @@ h1 {
 form {
   width: 70%;
   margin: auto;
+  display: flex;
 }
 
-ul {
+/*ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-/*li {
+li {
   line-height: 7.25rem;
   cursor: default;
-}*/
+}
+*/
 
-#todos {
+#todos, #controllers {
   font-size: 1.2em;
   border: 2px solid #B8B8B8;
   border-radius: 5px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
 
 }
 
@@ -53,16 +55,37 @@ input {
 }
 
 input[type="text"] {
-  min-width: 0;
-  flex: 1 1 100%;
+  /*min-width: 0;*/
   box-shadow: inset 0 0 5px #B8B8B8;
   padding: 0 0.5em;
   color: #B8B8B8;
 }
 
 input[type="button"] {
-  flex: 1 1 min-content;
   background-color: #DD6EE6;
   padding: 0 0.5em;
   color: white;
+}
+
+#todos {
+  flex-basis: 100%;
+  justify-content: stretch;
+}
+
+#controllers {
+  flex-basis: min-content;
+  justify-content: space-between;
+}
+
+#controllers > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#controllers > div:nth-child(even) {
+  background-color: aqua;
+}
+
+label:nth-child(even) {
+  background-color: aqua;
 }
