@@ -17,24 +17,21 @@
 
 <body>
   <main>
-    <h1>Tennivalók</h1>
-    <form action="">
-      <div id="todos">
-        <input type="text">
-        <label>Vegyél tejet</label>
-        <label>Vegyél tejet</label>
-        <label>Vegyél tejet</label>
-        <label>Vegyél tejet</label>
-        </ul>
+    <header>
+      <h1>Tennivalók</h1>
+      <div id="addTodoLine">
+        <input type="text" placeholder="Elnevez...">
+        <span class="addBtn">Hozzáad</span>
       </div>
-      <div id="controllers">
-        <input type="button" value="Hozzáad">
-        <div><span class="fas fa-trash"></span><span class="far fa-check-circle"></span></div>
-        <div><span class="fas fa-trash"></span><span class="far fa-check-circle"></span></div>
-        <div><span class="fas fa-trash"></span><span class="far fa-check-circle"></span></div>
-        <div><span class="fas fa-trash"></span><span class="far fa-check-circle"></span></div>
-      </div>
-    </form>
+    </header>
+    <ul id="myUL">
+      <li>Hit the gym<span class="fas fa-trash"></span><span class="far fa-check-circle"></span></li>
+      <li class="checked">Pay bills<span class="fas fa-trash"></span><span class="far fa-check-circle"></span></li>
+      <li>Meet George<span class="fas fa-trash"></span><span class="far fa-check-circle"></span></li>
+      <li>Buy eggs<span class="fas fa-trash"></span><span class="far fa-check-circle"></span></li>
+      <li>Read a book<span class="fas fa-trash"></span><span class="far fa-check-circle"></span></li>
+      <li>Organize office<span class="fas fa-trash"></span><span class="far fa-check-circle"></span></li>
+    </ul>
   </main>
   <script src="scripts.js"></script>
 </body>

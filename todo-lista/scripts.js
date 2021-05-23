@@ -1,17 +1,19 @@
-$('input[type="button"]').on("click", addToDo);
+$('.addBtn').on("click", addToDo);
 $("li").on("click", lineThrough);
 $('input[type="text"]').keypress(isEnter);
 
 function isEnter(e) {
-  if(e.key=="Enter"){
-    $('input[type="button"]').click();
+  if (e.key == "Enter") {
+    $('.addBtn').click();
     return false;
   }
 }
 
 function addToDo() {
-  $("ul").append(`<li>${$('input[type="text"]').val()}</li>`);
-  $("li").on("click", lineThrough);
+  if ($('input[type="text"]').val() !== "") {
+    $("ul").append(`<li>${$('input[type="text"]').val()}</li>`);
+    $("li").on("click", lineThrough);
+  }
 }
 
 function lineThrough() {
