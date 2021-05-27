@@ -15,6 +15,7 @@
    border-radius: 5px;
    box-shadow: 0 0 5px gray;
    margin: auto;
+   padding-bottom: 3em;
  }
 
  main {
@@ -23,16 +24,12 @@
  }
 
  h1 {
-   /*font-size: 2em;*/
+   font-size: 2em;
    font-weight: 300;
    text-align: center;
    text-transform: uppercase;
+   letter-spacing: 5px;
    padding-top: 2em;
- }
-
- ul {
-   list-style-type: none;
-   padding: 0;
  }
 
  #addTodoLine {
@@ -44,12 +41,6 @@
    border-radius: 5px;
  }
 
- .addBtn {
-   cursor: default;
-   user-select: none;
-   flex-basis: min-content;
- }
-
  input {
    margin: 0;
    border: none;
@@ -58,90 +49,84 @@
    font-size: inherit;
    box-shadow: inset 0 0 5px #B8B8B8;
    color: #B8B8B8;
-   flex-basis: 100%;
    min-width: 0;
    padding: 0 0.5em;
+   flex-basis: 100%;
  }
 
- 
-
- ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 0.5em 0;
-  /*background: #eee;*/ /*???*/
-  font-size: 1.3em;
-  transition: 0.2s;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-
- ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
-
- ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-
- /*ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-
- /*ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-
- /*.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-
-/* Clear floats after the header */
-
- /*.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}*/
-
- .addBtn {
+ #addButton {
+   cursor: pointer;
+   user-select: none;
+   flex-basis: 0;
    padding: 0 0.5em;
    text-align: center;
    background-color: #DD6EE6;
    color: white;
-   cursor: default;
    transition: 0.3s;
  }
 
- .addBtn:hover {
+ #addButton:hover {
    background-color: #c161cc;
+ }
+
+ ul {
+   list-style-type: none;
+   padding: 0;
+ }
+
+ ul li {
+   cursor: pointer;
+   position: relative;
+   padding: 0 0.5em;
+   font-size: 1.3em;
+   line-height: 1.5em;
+   transition: 0.2s;
+   user-select: none;
+   border-radius: 5px;
+ }
+
+ span.fa-check-circle, span.fa-trash {
+   position: absolute;
+   right: 0;
+   line-height: 1.5em;
+   padding: 0 0.5em;
+ }
+
+ span.fas.fa-check-circle {
+   color: #dd6ee6;
+   visibility: hidden;
+ }
+
+ li.checked>span.far.fa-check-circle {
+   visibility: hidden;
+ }
+
+ li.checked>span.fas.fa-check-circle {
+   visibility: visible;
+ }
+
+ ul>li:nth-child(odd) {
+   background: #eee;
+ }
+
+ ul li:hover {
+   background: #ddd;
+ }
+
+ ul li.checked {
+   text-decoration: line-through;
+   color: #ddd;
+ }
+
+ span.fas.fa-trash {
+   color: #B8B8B8;
+   right: 2em;
+ }
+
+ span.fas.fa-trash:hover {
+   color: tomato;
+ }
+
+ li.checked>span.fas.fa-trash:hover {
+   color: lime;
  }

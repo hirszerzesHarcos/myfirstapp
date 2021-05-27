@@ -1,21 +1,27 @@
-$('.addBtn').on("click", addToDo);
-$("li").on("click", lineThrough);
-$('input[type="text"]').keypress(isEnter);
+function todoAdd() {
+  let todo = $("#addTodoLine input").val();
+  if (todo == "") {
+    alert("Nem adtál meg tennivalót!");
+  } else {
+    $("#todoList").prepend($('<li>' + todo + '<span class="fas fa-trash"></span><span class="far fa-check-circle"></span><span class="fas fa-check-circle"></span></li>').on("click", function () {
+      $(this).toggleClass("checked");
+    }));
+  }
+}
 
-function isEnter(e) {
-  if (e.key == "Enter") {
-    $('.addBtn').click();
+function isEnter(event) {
+  if (event.key == "Enter") {
+    $("#addButton").click();
     return false;
   }
 }
 
-function addToDo() {
-  if ($('input[type="text"]').val() !== "") {
-    $("ul").append(`<li>${$('input[type="text"]').val()}</li>`);
-    $("li").on("click", lineThrough);
-  }
-}
-
-function lineThrough() {
-  $(this).css("text-decoration", "line-through");
-}
+$(document).ready(function () {
+  $("#addButton").on("click", function () {
+    todoAdd();
+  });
+  $("#todoList").on('click', '.fa-trash', (event) => {
+    $(event.target).parent().remove();
+  });
+  $("#addTodoLine input").keypress(isEnter);
+});
