@@ -1,16 +1,43 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 0;
-  width: 100vw;
+}
+
+body {
+  /*width: 100vw;
   height: 100vh;
+  max-width: 100%;
+  max-height: 100%;*/
   background-image: radial-gradient(circle farthest-corner at 50% -25%, white, darkgrey);
-  overflow: hidden;
+  /*overflow: hidden;*/
+}
+
+h1 {
+  display: none;
+}
+
+.full-screen-div {
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #imageGallery {
-  width: 1000px;
-  height: 200px; /*562.5px;*/
-  margin: auto;
+  width: 800px;
+  height: 380px;
+  background-image: radial-gradient(circle farthest-side at 50% -200%, white 75%, #e0e0e0);
+  /*562.5px;*/
+  /*margin: auto;*/
 }
 
 img {
@@ -18,3 +45,18 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
+/*tükrözés 
+ transform: scaleX(-1);
+
+ bal fent 100; 145
+ 800*310 nyilakkal együtt
+
+ 710*85
+12
+46
+12
+---
+70
+
+ */
