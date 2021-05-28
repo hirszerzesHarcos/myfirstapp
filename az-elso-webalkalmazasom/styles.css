@@ -9,16 +9,7 @@ body, html {
 }
 
 body {
-  /*width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100%;*/
-  background-image: radial-gradient(circle farthest-corner at 50% -25%, white, darkgrey);
-  /*overflow: hidden;*/
-}
-
-h1 {
-  display: none;
+  background-image: radial-gradient( ellipse farthest-corner at 50% -200%, rgba(255, 255, 255, 0.9) 40%, rgba(170, 170, 170, 0.9)), repeating-linear-gradient( 90deg, rgba(200, 200, 200, 0.2), rgba(200, 200, 200, 0.2) 1px, transparent 1px, transparent 10px), repeating-linear-gradient( 180deg, rgba(200, 200, 200, 0.2), rgba(200, 200, 200, 0.2) 1px, transparent 1px, transparent 10px);
 }
 
 .full-screen-div {
@@ -32,12 +23,42 @@ h1 {
   align-items: center;
 }
 
-#imageGallery {
+#image-gallery {
   width: 800px;
   height: 380px;
+  /*background-color: aqua;*/
+}
+
+#big-image-container {
+  width: 100%;
+  height: 310px;
   background-image: radial-gradient(circle farthest-side at 50% -200%, white 75%, #e0e0e0);
-  /*562.5px;*/
-  /*margin: auto;*/
+  border-radius: 2px;
+  box-shadow: 0 4px 4px grey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#prev, #next {
+  color: red;/*#4e4e4e;*/
+  width: 15px;
+  height: auto;
+}
+
+#prev:hover, #next:hover {
+  /*transition: 0.3s;*/
+  background-color: #d0d0d0;
+}
+
+#next {
+  /*tükrözése*/
+  transform: scaleX(-1);
+}
+
+#big-image {
+  width: 710px;
+  height: 100%;
 }
 
 img {
@@ -46,17 +67,6 @@ img {
   object-fit: cover;
 }
 
-/*tükrözés 
- transform: scaleX(-1);
-
- bal fent 100; 145
- 800*310 nyilakkal együtt
-
- 710*85
-12
-46
-12
----
-70
-
- */
+/*
+bal fent 100;
+145 800*310 nyilakkal együtt 710*85 12 46 12 --- 70 */
