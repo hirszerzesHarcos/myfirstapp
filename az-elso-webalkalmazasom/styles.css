@@ -41,19 +41,20 @@ body {
 }
 
 #prev, #next {
-  color: red;/*#4e4e4e;*/
-  width: 15px;
-  height: auto;
+  color: #4e4e4e;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  user-select: none;
+  width: 45px;
+  height: 100%;
+  text-align: center;
+  line-height: 310px;
 }
 
 #prev:hover, #next:hover {
-  /*transition: 0.3s;*/
-  background-color: #d0d0d0;
-}
-
-#next {
-  /*tükrözése*/
-  transform: scaleX(-1);
+  transition: 0.2s;
+  color: #d0d0d0;
 }
 
 #big-image {
