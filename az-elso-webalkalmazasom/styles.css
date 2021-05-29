@@ -41,25 +41,62 @@ body {
 }
 
 #prev, #next {
-  color: #4e4e4e;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 25px;
-  user-select: none;
   width: 45px;
   height: 100%;
-  text-align: center;
-  line-height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#prev:hover, #next:hover {
-  transition: 0.2s;
-  color: #d0d0d0;
+#prev>img, #next>img {
+  width: 15px;
+  height: auto;
+  transition: 0.3s;
+}
+
+#prev:hover img, #next:hover img {
+  opacity: 0.25;
+}
+
+#next>img {
+  transform: scale(-1);
 }
 
 #big-image {
+  position: relative;
   width: 710px;
   height: 100%;
+}
+
+.gray-container {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  bottom: 0;
+  padding: 0 16px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 3s;
+  transition-timing-function: ease-in;
+
+}
+
+#big-image-container:hover .gray-container {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.gray-container>h1 {
+  color: white;
+  margin: 12px 0 8px 0;
+  font-size: 18px;
+}
+
+.gray-container>p {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 8px 0 12px 0;
+  font-size: 11px;
 }
 
 img {

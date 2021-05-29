@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galéria</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -13,7 +15,9 @@
   <div class="full-screen-div">
     <div id="image-gallery">
       <div id="big-image-container">
-        <div id="prev">&#10094;</div>
+        <div id="prev">
+          <img src="images/arrow.svg" alt="">
+        </div>
         <div id="big-image">
           <img id="photo">
           <div class="gray-container">
@@ -21,7 +25,9 @@
             <p id="photo-description"></p>
           </div>
         </div>
-        <div id="next">&#10095;</div>
+        <div id="next">
+          <img src="images/arrow.svg" alt="">
+        </div>
       </div>
     </div>
   </div>
