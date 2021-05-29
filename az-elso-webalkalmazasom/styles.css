@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 310px;
   background-image: radial-gradient(circle farthest-side at 50% -200%, white 75%, #e0e0e0);
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: 0 4px 4px grey;
   display: flex;
   justify-content: space-evenly;
@@ -53,6 +53,7 @@ body {
   width: 15px;
   height: auto;
   transition: 0.3s;
+  user-select: none;
 }
 
 #prev:hover img, #next:hover img {
@@ -67,6 +68,7 @@ body {
   position: relative;
   width: 710px;
   height: 100%;
+  user-select: none;
 }
 
 .gray-container {
@@ -79,7 +81,7 @@ body {
   opacity: 0;
   transition: 3s;
   transition-timing-function: ease-in;
-
+  user-select: text;
 }
 
 #big-image-container:hover .gray-container {
@@ -99,6 +101,25 @@ body {
   font-size: 11px;
 }
 
+#thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 70px;
+}
+
+#thumbnails>img {
+  width: 46px;
+  height: 46px;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0 5px 5px -5px black;
+  background-image: linear-gradient(white, white), linear-gradient(white, lightgray);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -107,4 +128,14 @@ img {
 
 /*
 bal fent 100;
-145 800*310 nyilakkal együtt 710*85 12 46 12 --- 70 */
+145 
+
+800*310 nyilakkal együtt
+
+710*85
+
+12
+46
+12
+---
+70 */

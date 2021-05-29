@@ -41,7 +41,14 @@ let loadPhoto = (photoNumber) => {
 }
 $(document).ready(function () {
   loadPhoto(currentPhoto);
+  imagesData.forEach(function (image, index) {
+    $("#thumbnails").append(`<img src="${image.photo}" data-number="${index}" alt="">`);
+  });
+  $("#thumbnails>img").click((event) => {
+    loadPhoto(parseInt($(event.target).attr('data-number')));
+  });
 });
+
 
 
 $("#next").click(() => {
