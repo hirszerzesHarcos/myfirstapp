@@ -42,9 +42,10 @@ let loadPhoto = (photoNumber) => {
 $(document).ready(function () {
   loadPhoto(currentPhoto);
   imagesData.forEach(function (image, index) {
-    $("#thumbnails").append(`<img src="${image.photo}" data-number="${index}" alt="">`);
+    $("#thumbnails").append(`<div data-number="${index}">`);
+    $(`#thumbnails>div[data-number="${index}"]`).css("background-image", 'url("'+image.photo+'"), linear-gradient(white, lightgray)');
   });
-  $("#thumbnails>img").click((event) => {
+  $("#thumbnails>div").click((event) => {
     loadPhoto(parseInt($(event.target).attr('data-number')));
   });
 });
