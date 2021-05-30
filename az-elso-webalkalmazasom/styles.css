@@ -127,7 +127,7 @@ body {
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 
 /*
