@@ -42,8 +42,8 @@ let loadPhoto = (photoNumber) => {
 $(document).ready(function () {
   loadPhoto(currentPhoto);
   imagesData.forEach(function (image, index) {
-    $("#thumbnails").append(`<div data-number="${index}">`);
-    $(`#thumbnails>div[data-number="${index}"]`).css("background-image", 'url("'+image.photo+'"), linear-gradient(white, lightgray)');
+    $("#thumbnails").append(`<div data-number="${index}"></div>`);
+    $(`#thumbnails>div[data-number="${index}"]`).css("background-image", 'url("' + image.photo + '"), linear-gradient(white, lightgray)');
   });
   $("#thumbnails>div").click((event) => {
     loadPhoto(parseInt($(event.target).attr('data-number')));
