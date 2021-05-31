@@ -51,17 +51,17 @@ $(document).ready(function () {
 });
 
 
-
 $("#next").click(() => {
-  if (imagesData.length - 1 > currentPhoto) {
-    currentPhoto++;
-    loadPhoto(currentPhoto);
-  }
+  currentPhoto++;
+  currentPhoto %= imagesData.length;
+  loadPhoto(currentPhoto);
 });
 
 $("#prev").click(() => {
   if (currentPhoto > 0) {
     currentPhoto--;
-    loadPhoto(currentPhoto);
+  } else {
+    currentPhoto = imagesData.length - 1;
   }
+  loadPhoto(currentPhoto);
 })
