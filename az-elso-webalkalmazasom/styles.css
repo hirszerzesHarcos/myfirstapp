@@ -26,7 +26,6 @@ body {
 #image-gallery {
   width: 800px;
   height: 380px;
-  /*background-color: aqua;*/
 }
 
 #big-image-container {
@@ -37,43 +36,34 @@ body {
   box-shadow: 0 4px 4px grey;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
 }
 
 #prev, #next {
+  background: url("images/arrow.svg") no-repeat center;
+  background-size: 15px;
   cursor: pointer;
   width: 45px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#prev>img, #next>img {
-  width: 15px;
-  height: auto;
   transition: 0.3s;
-  user-select: none;
 }
 
-#prev:hover img, #next:hover img {
+#prev:hover, #next:hover {
   opacity: 0.25;
 }
 
-#next>img {
+#next {
   transform: scale(-1);
 }
 
 #big-image {
   position: relative;
   width: 710px;
-  height: 100%;
   user-select: none;
 }
 
 #photo {
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   width: 100%;
   height: 100%;
 }
@@ -88,7 +78,7 @@ body {
   opacity: 0;
   transition: 3s;
   transition-timing-function: ease-in;
-  user-select: text;
+  user-select: none;
 }
 
 #big-image-container:hover .gray-container {
