@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: 310px;
   background-image: radial-gradient(circle farthest-side at 50% -200%, white 75%, #e0e0e0);
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 0 4px 4px grey;
   display: flex;
   justify-content: space-evenly;
@@ -111,7 +111,7 @@ body {
   width: 46px;
   height: 46px;
   border: 3px solid transparent;
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 0 5px 5px -5px black;
   background-image: url(""), linear-gradient(white, lightgray);
   /*url from js*/
@@ -119,16 +119,7 @@ body {
   background-clip: padding-box, border-box;
   background-size: cover;
   background-position: center;
-}
-span.tooltip-text {
-  /*display: none;*/
-  position: relative;
-  background-image: linear-gradient(black #202020);
-  height: 23px;
-  color: white;
-  border-radius: 5px;
-  padding: 0;
-  top: 0px;
+  display: inline-block;
 }
 
 #thumbnails>div.active {
@@ -147,20 +138,38 @@ span.tooltip-text {
   border-color: transparent transparent white transparent;
 }
 
-.thumbnail:hover .title {
-  display: block;
+#thumbnails>div:hover {
+  top: -2px;
+  box-shadow: 0 7px 5px -5px black;
 }
 
-/*
-bal fent 100;
-145 
+#thumbnails span.tooltip-text {
+  visibility: hidden;
+  border-radius: 2px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  /*left: 50%;*/
+  /*margin-left: -50%;*/
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s;
+  background-image: linear-gradient(black, #202020);
+  color: white;
+  filter: drop-shadow(grey 0 4px 4px);
+}
 
-800*310 nyilakkal együtt
+#thumbnails span.tooltip-text::after {
+  border: 5px solid transparent;
+  border-top-color: #202020;
+  content: "";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  top: 100%;
+}
 
-710*85
-
-12
-46
-12
----
-70 */
+#thumbnails>div:not(.active):hover span.tooltip-text {
+  visibility: visible;
+}
