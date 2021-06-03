@@ -1,7 +1,0 @@
-Mikor rákattintunk a nyilakra, a középen lévő nagy kép(és az ehhez tartozó cím és leírás) átvált a következőre vagy az előzőre a gombtól függően
-Ugyanekkor az éppen aktív thumbnail is változik az aktuálisan kiválasztott kép alapján
-Bármelyik thumbnailre kattintáskor az adott kép kerül kiválasztásra
-A nyilak hatása, az éppen megjelenített nagy kép és az aktív thumbnail mindig legyenek egymással szinkronban
-Látszódjon, hogy melyik thumbnail aktív (egészítsd ki a loadPhoto függvényedet)
-Készítsd el a szöveget ami megjelenik amikor a thumbnail felett van a kurzor
-Ezt például megtehet úgy, hogy létrehozod és pozícionálod a szükséges HTML taget, de alapból rejtve van és csak akkor látszik ha a kurzor az adott thumbnail felett van 
