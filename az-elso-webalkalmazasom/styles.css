@@ -150,8 +150,8 @@ body {
   position: absolute;
   z-index: 1;
   bottom: 110%;
-  /*left: 50%;*/
-  /*margin-left: -50%;*/
+  left: 50%;
+  transform: translateX(-50%);
   white-space: nowrap;
   opacity: 1;
   transition: opacity 0.3s;
