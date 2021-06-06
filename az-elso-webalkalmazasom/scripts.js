@@ -36,31 +36,31 @@ let currentPhoto = 0;
 
 $(document).ready(function () {
   imagesData.forEach(function (image, index) {
-    $("#thumbnails").append(`<div data-number="${index}"><span class="tooltip-text">${image.title}</span></div>`);
-    $(`#thumbnails>div[data-number="${index}"]`).css("background-image", 'url("' + image.photo + '"), linear-gradient(white, lightgray)');
+    $(".thumbnails").append(`<div class="thumbnail" data-number="${index}"><div class="content"><div class="tooltip"><span class="tooltip-text">${image.title}</span></div></div></div>`);
+    $(`.thumbnails>.thumbnail[data-number="${index}"]>.content`).css("background-image", 'url("' + image.photo + '"), linear-gradient(white, lightgray)');
   });
-  $("#thumbnails>div").click((event) => {
-    currentPhoto = parseInt($(event.target).attr("data-number"));
+  $(".image-gallery>.thumbnails>.thumbnail").click((event) => {
+    currentPhoto = parseInt($(event.target).parent().attr("data-number"));
     loadPhoto(currentPhoto);
   });
   loadPhoto(currentPhoto);
 });
 
 let loadPhoto = (photoNumber) => {
-  $("#photo").attr("src", imagesData[photoNumber].photo);
-  $("#photo-title").text(imagesData[photoNumber].title);
-  $("#photo-description").text(imagesData[photoNumber].description);
-  $("#thumbnails>div[data-number]").removeClass("active");
-  $(`#thumbnails>div[data-number="${photoNumber}"]`).addClass("active");
+  $(".photo").css("background-image", `url("${imagesData[photoNumber].photo}")`);
+  $(".photo-title").text(imagesData[photoNumber].title);
+  $(".photo-description").text(imagesData[photoNumber].description);
+  $(".thumbnails>.thumbnail[data-number]").removeClass("active");
+  $(`.thumbnails>.thumbnail[data-number="${photoNumber}"]`).addClass("active");
 }
 
-$("#next").click(() => {
+$(".next").click(() => {
   currentPhoto++;
   currentPhoto %= imagesData.length;
   loadPhoto(currentPhoto);
 });
 
-$("#prev").click(() => {
+$(".prev").click(() => {
   if (currentPhoto > 0) {
     currentPhoto--;
   } else {
