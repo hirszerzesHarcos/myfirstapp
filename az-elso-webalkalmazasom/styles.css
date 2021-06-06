@@ -2,12 +2,11 @@
   box-sizing: border-box;
 }
 
-/*body, html {
+body, html {
   height: 100%;
   width: 100%;
   margin: 0;
 }
-*/
 
 body {
   background-image: radial-gradient( ellipse farthest-corner at 50% -200%, rgba(255, 255, 255, 0.9) 40%, rgba(170, 170, 170, 0.9)), repeating-linear-gradient( 90deg, rgba(200, 200, 200, 0.2), rgba(200, 200, 200, 0.2) 1px, transparent 1px, transparent 10px), repeating-linear-gradient( 180deg, rgba(200, 200, 200, 0.2), rgba(200, 200, 200, 0.2) 1px, transparent 1px, transparent 10px);
