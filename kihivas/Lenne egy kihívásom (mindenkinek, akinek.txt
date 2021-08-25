@@ -1,0 +1,90 @@
+Lenne egy kihívásom (mindenkinek, akinek van kedve, gyakorlásként - függvények, ürlap, akár CSS):
+
+Írjatok egy weboldalt (a dizájt rátok bízom), ami kb. a következöket tartalmazza:
+
+Egy ürlap:
+Vezetéknév: ______
+Keresztnév: ______
+Életkor: ______
+
+[] Csak teszt
+
+Gombok:
+[Üdvözlés] [Korelemzés]
+
++ Egy eredménymezö, ami meg tud jeleníteni html-t: szöveget, listát...
+A gombok a következöket csinálják:
+Mindkét gomb esetében közös rész:
+Ha a "Csak teszt"
+- be van pipálva, a konzolra,
+- ha nincs, az eredménymezöbe,
+ha
+- max. 18 éves, tegezve,
+- ha idösebb, magázva,
+írjon ki egy köszönést:
+Szia [keresztnév]! / Üdvözöljük, kedves [vezetéknév] [keresztnév]!
+
+
+[Üdvözlés]:
+Ha az eredménymezöbe ír (nem a konzolra), írja hozzá a köszönéshez, ugyancsak kortól függöen:
+Reméljük, ma jól kezdödött a napod/napja!
+
+
+[Korelemzés]:
+Akár konzolra, akár eredménymezöbe írja hozzá a köszönéshez, ugyancsak kortól függöen:
+Az életkorod/életkora ([kor] év):
+2-vel osztható/nem osztható
+3-mal osztható/nem osztható
+5-tel osztható/nem osztható
+
+Ahol nem osztható, írja ki a sor végén:  (a maradék: [maradék]),
+pl.:
+Bendegúz, 14 éves:
+Szia Bendegúz!
+Az életkorod (14 év):
+2-vel osztható
+3-mal nem osztható (a maradék: 2)
+5-tel nem osztható (a maradék: 4)
+
+Petres Júlia, 33 éves:
+Üdvözöljük, kedves Petres Júlia!
+Az életkora (33 év):
+2-vel nem osztható (a maradék: 1)
+3-mal osztható
+5-tel nem osztható (a maradék: 3)
+
+Továbbfejlesztések:
+- Vizsgálja meg a bevitt adatokat( tipp: lehet ügyeskedni a beviteli elemmel is, hogy csak érvényes bevitelt fogadjon el):
+Ha kötelezö, de nem adta meg, vagy érvénytelen érték, jelezze a felhasználó felé, és ne hajtsa végre a fentieket.
+keresztnév: kötelezö (+ álljon csak betükböl, esetleg szóköz vagy kötöjel)
+vezetéknév: opcionális
+életkor: kötelezö, legyen érvényes életkor (egész szám, > 0, stb.)
+
+- A 2-vel, 3-mal ... a rag jöjjön egy fv-böl. A fv. legalább bizonyos határig bármilyen számra tudja visszaadni a -val/-vel rag megfelelö formáját.
+
+- Az osztható/nem osztható vizsgálatot végezze el további prímszámokra is (de csak az életkornál kisebbekre).
+
+
+Sok sikert a vállalkozó szellemüeknek :slight_smile: Próbáljatok elegáns megoldást adni.
+Boda Eszter — ma 9:47-kor
+Tipp az oszthatóság eldöntésére:
+% egész osztás maradéka (modulus operátor, mod)
+/ egész osztás eredménye (division operátor, div)
+
+A maradék meghatározása egész számok osztásakor (x, y, r egész számok):
+r = x % y;
+ha y az osztó, amivel való osztás maradékát keressük,
+x az a szám, amit y-nal osztva a maradékot keressük,
+r a maradék (remainder)
+
+
+Ha pedig az érdekel, hányszor van meg benne (maradékosan):
+d = x / y;
+
+Maradékos osztás kézi ellenörzése:
+d * y + r == x;
+
++ Feladat:
+Olyan fv., ami egy másodpercben megadott számot átvált óra - perc - másodpercre, pl.
+Bemegy: 11576
+Kijön: 3 óra 12 perc 56 másodperc

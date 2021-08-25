@@ -1,0 +1,90 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url("https://jooinn.com/images/ice-mountain-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, .8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+  border-radius: 10px;
+}
+
+.box h2 {
+  margin: 0 0 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline-style: none;
+  background-color: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition-duration: .5s;
+}
+
+.box .inputBox label sup {
+  font-size: 10px;
+  transition: opacity 0.5s;
+}
+
+.box .inputBox input:valid~label, .box .inputBox input:focus~label {
+  top: -18px;
+  color: #03a9f4;
+  font-size: 12px;
+}
+
+.box .inputBox input:valid~label sup, .box .inputBox input:focus~label sup {
+  opacity: 0;
+}
+
+.box .inputBox input:valid, .box .inputBox input:focus {
+  border-bottom-color: #03a9f4;
+}
+
+.box input[type="button"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #03a9f4;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
