@@ -9,31 +9,29 @@
 </head>
 
 <body>
-  <h1>Kihívás v0.2.5</h1>
+  <h1>Kihívás v0.4.13</h1>
   <div class="box">
     <h2>Egy űrlap</h2>
     <form>
-      <div class="inputBox">
-        <input type="text" name="lastName" id="lastName" required>
+      <div class="inputTextBox">
+        <input type="text" id="lastName" required>
         <label for="lastName">Vezetéknév <sup>(kötelező)</sup></label>
       </div>
-      <div class="inputBox">
-        <input type="text" name="firstName" id="firstName" required>
+      <div class="inputTextBox">
+        <input type="text" id="firstName" required>
         <label for="firstName">Keresztnév <sup>(kötelező)</sup></label>
       </div>
-      <div class="inputBox">
-        <input type="text" name="age" id="age" required>
+      <div class="inputTextBox">
+        <input type="text" id="age" required>
         <label for="age">Életkor <sup>(kötelező)</sup></label>
       </div>
-      <div>
-        <input type="checkbox" name="test" id="test" value="teszt">
-        <label for="test">Csak teszt</label>
+      <div class="inputTestBox">
+        <input type="checkbox" id="isTest">
+        <label for="isTest">Csak teszt</label>
       </div>
-      <div class="nputBox">
-        <input type="button" name="" id="" value="Üdvözlés">
-      </div>
-      <div class="nputBox">
-        <input type="button" name="" id="" value="Korelemzés">
+      <div class="controllersBox">
+        <input type="button" id="greeting" value="Üdvözlés">
+        <input type="button" id="ageAnalysis" value="Korelemzés">
       </div>
     </form>
   </div>
