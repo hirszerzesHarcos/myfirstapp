@@ -145,6 +145,7 @@ input:checked[type="checkbox"]:after {
 }
 
 input:checked[type="checkbox"]+label {
+  letter-spacing: 5px;
   text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
 }
 
@@ -162,6 +163,7 @@ input:checked[type="checkbox"]+label {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  transition: .5s;
 }
 
 .box .controllersBox {
@@ -188,5 +190,4 @@ input:checked[type="checkbox"]+label {
   letter-spacing: 5px;
   text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
   background-color: transparent;
-  overflow: visible;
 }
