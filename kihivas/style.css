@@ -98,6 +98,16 @@ label {
   border-bottom-color: #03a9f4;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
 input[type="checkbox"] {
   position: relative;
   width: 90px;
