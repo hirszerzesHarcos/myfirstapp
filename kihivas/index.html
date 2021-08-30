@@ -12,10 +12,15 @@
   <h1>Kihívás v0.5.17</h1>
   <div class="box">
     <h2>Egy űrlap</h2>
-    <form>
+    <form autocomplete="off">
       <div class="inputTextBox">
         <input type="text" id="lastName" placeholder=" " required pattern="[A-Za-zÁáÉéÍíÓóÖöŐőÚúÜüŰű\-']+">
         <label for="lastName">Vezetéknév <sup>(kötelező)</sup></label>
+        <ul>
+          <li>csak a magyar "ábc" betűi elfogadottak</li>
+          <li>' és - karakterek alkalmazhatóak</li>
+          <li>szóköz, és egyéb különleges karakterek nem használhatóak</li>
+        </ul>
       </div>
       <div class="inputTextBox">
         <input type="text" id="firstName" placeholder=" " required pattern="[A-Za-zÁáÉéÍíÓóÖöŐőÚúÜüŰű\- ]+">

@@ -20,7 +20,7 @@ h1 {
   margin: 0;
 }
 
-h1, h2 {
+h1, h2, label, ul {
   user-select: none;
 }
 
@@ -30,6 +30,7 @@ h1, h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);*/
+  color: #fff;
   max-width: 400px;
   padding: 40px;
   background-color: rgba(0, 0, 0, .8);
@@ -38,7 +39,7 @@ h1, h2 {
   border-radius: 10px;
 }
 
-.box h2 {
+/*.box h2 {
   margin: 0 0 30px;
   color: #fff;
   text-align: center;
@@ -86,7 +87,8 @@ label {
   top: -18px;
   color: #fff;
   /*#03a9f4;*/
-  text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
+
+/*text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
   font-size: 12px;
 }
 
@@ -100,14 +102,14 @@ label {
 
 /* Chrome, Safari, Edge, Opera */
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+/*input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 
-input[type=number] {
+/*input[type=number] {
   -moz-appearance: textfield;
 }
 
@@ -174,7 +176,8 @@ input:checked[type="checkbox"]+label {
   display: flex;
   justify-content: space-between;
   /*flex-direction: row-reverse;*/
-  gap: 30px;
+
+/*gap: 30px;
   margin-bottom: 30px;
 }
 
