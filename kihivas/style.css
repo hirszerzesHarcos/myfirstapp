@@ -44,7 +44,7 @@ h1, h2, label, ul {
   text-align: center;
 }
 
-.box>form>div:not(:last-of-type) {
+.box div {
   position: relative;
 }
 
@@ -58,20 +58,22 @@ h1, h2, label, ul {
 }
 
 .box input:not([type="checkbox"]) {
-  width: 100%;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
 }
 
-.box>form>div:not(:last-of-type)>input {
-  margin-bottom: 30px;
+div, .box input:not([type="checkbox"]) {
+  width: 100%;
+}
+
+.box div>input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #fff;
 }
 
-.box>form>div:not(:last-of-type)>label {
+.box div>label {
   position: absolute;
   top: 0;
   left: 0;
@@ -79,26 +81,20 @@ h1, h2, label, ul {
   transition: .5s;
 }
 
-/*.box .inputTextBox label sup {
+.box label sup {
   font-size: 10px;
-  transition: opacity 0.5s;
-}*/
+}
 
 /*.box .inputTextBox input:valid~label,*/
 
-.box>form>div:not(:last-of-type)>input:focus+label, .box>form>div:not(:last-of-type)>input:valid+label {
+.box div>input:focus+label, .box div>input:valid+label {
   top: -18px;
   color: #03a9f4;
   /*text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;*/
   font-size: 12px;
-  /*font-weight: bold;*/
 }
 
-/* .box .inputTextBox input:valid~label sup, .box .inputTextBox input:focus~label sup {
-  opacity: 0;
-}*/
-
-.box>form>div>input:valid, .box>form>div>input:focus {
+.box div>input:valid, .box div>input:focus {
   border-bottom-color: #03a9f4;
 }
 
@@ -167,38 +163,12 @@ input:checked[type="checkbox"]:after {
   box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
 }
 
-/*checkbox utáni label letter-spacing: 1px*/
-
 /*input:checked[type="checkbox"]+label {
   letter-spacing: 5px;
   text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
-}
-
-.box .inputTestBox {
-  display: flex;
-  justify-content: space-between;
-  /*flex-direction: row-reverse;*/
-
-/*gap: 30px;
-  margin-bottom: 30px;
-}
-
-.box .inputTestBox label {
-  letter-spacing: 1px;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  
-  transition: .5s;
-}
-
-.box .controllersBox {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }*/
 
-.box>form>div:last-of-type {
+.box>form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
