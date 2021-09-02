@@ -44,6 +44,13 @@ h1, h2, label, ul {
   text-align: center;
 }
 
+.box>form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 0;
+}
+
 .box div {
   position: relative;
 }
@@ -71,6 +78,7 @@ div, .box input:not([type="checkbox"]) {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #fff;
+  transition: .5s;
 }
 
 .box div>label {
@@ -85,18 +93,30 @@ div, .box input:not([type="checkbox"]) {
   font-size: 10px;
 }
 
-/*.box .inputTextBox input:valid~label,*/
-
-.box div>input:focus+label, .box div>input:valid+label {
+.box div>input:focus+label, .box div>input:hover+label, .box div>input:not(:placeholder-shown)+label {
   top: -18px;
-  color: #03a9f4;
-  /*text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;*/
   font-size: 12px;
 }
 
-.box div>input:valid, .box div>input:focus {
-  border-bottom-color: #03a9f4;
+.box div>input:not(:placeholder-shown):not(:focus):valid {
+  border-bottom-color: #04abf2;
 }
+
+.box div>input:not(:placeholder-shown):not(:focus):invalid {
+  border-bottom-color: #f20434;
+}
+
+.box div>input:not(:placeholder-shown):not(:focus):valid+label {
+  color: #04abf2;
+  text-shadow: 0 0 5px #00b6ff, 0 0 10px #00b6ff, 0 0 20px #00b6ff, 0 0 40px #00b6ff, 0 0 60px #00b6ff;
+}
+
+.box div>input:not(:placeholder-shown):not(:focus):invalid+label {
+  color: #f20434;
+  text-shadow: 0 0 5px #ff0037, 0 0 10px #ff0037, 0 0 20px #ff0037, 0 0 40px #ff0037, 0 0 60px #ff0037;
+}
+
+/* Léptető gombok eltűntetése type="number"-nél. */
 
 /* Chrome, Safari, Edge, Opera */
 
@@ -120,11 +140,10 @@ input[type="checkbox"] {
   border-radius: 20px;
   box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2);
   margin: 5px;
-  transition: .5s;
 }
 
 input:checked[type="checkbox"] {
-  background: linear-gradient(0deg, #6dd1ff, #20b7ff);
+  background-image: linear-gradient(0deg, #6dd1ff, #20b7ff);
   box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2);
 }
 
@@ -163,37 +182,24 @@ input:checked[type="checkbox"]:after {
   box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
 }
 
-/*input:checked[type="checkbox"]+label {
-  letter-spacing: 5px;
-  text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
-}*/
+input[type="checkbox"]+label {
+  transition: .5s;
+}
 
-.box>form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px 0;
+input:checked[type="checkbox"]+label {
+  letter-spacing: 5px;
+  text-shadow: 0 0 5px #00b6ff, 0 0 10px #00b6ff, 0 0 20px #00b6ff, 0 0 40px #00b6ff, 0 0 60px #00b6ff;
 }
 
 .box input[type="button"] {
   border: none;
-  background-color: #03a9f4;
+  background-color: #04abf2;
   border-radius: 5px;
-  /*transition: .5s;*/
+  transition: .5s;
 }
 
-/*.box .controllersBox input:hover[type="button"] {
+.box input:hover[type="button"] {
   letter-spacing: 5px;
-  text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 60px #00b3ff;
+  text-shadow: 0 0 5px #00b6ff, 0 0 10px #00b6ff, 0 0 20px #00b6ff, 0 0 40px #00b6ff, 0 0 60px #00b6ff;
   background-color: transparent;
-}*/
-
-/*#f07178*/
-
-/*input:not(:placeholder-shown):invalid {
-  border: 2px solid red;
 }
-
-input:not(:placeholder-shown):not(:focus):invalid {
-  border: 2px solid red;
-}*/

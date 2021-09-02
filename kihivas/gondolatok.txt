@@ -1,0 +1,5 @@
+Ha fókusz van, vagy nincs placeholder, akkor label top. PIPA
+
+Ha nincs fókusz, és nincs placeholder, és invalid, akkor piri. PIPA
+
+Ha nincs fókusz, és nincs placeholder, és valid, akkor kék. PIPA

@@ -13,18 +13,18 @@
 </head>
 
 <body>
-  <h1>Kihívás v0.5.21</h1>
+  <h1>Kihívás v0.6.23</h1>
   <div class="box">
     <h2>Egy űrlap</h2>
-    <form autocomplete="off">
+    <form autocomplete="off" novalidate>
       <div>
         <input type="text" id="lastName" placeholder=" " required pattern="[A-Za-zÁáÉéÍíÓóÖöŐőÚúÜüŰű\-']+">
         <label for="lastName">Vezetéknév <sup>(kötelező)</sup></label>
-        <!--ul>
-          <li>csak a magyar "ábc" betűi elfogadottak</li>
-          <li>' és - karakterek alkalmazhatóak</li>
+        <ul>
+          <li>csak a magyar "ABC" betűi elfogadottak</li>
+          <li>' és - karaktereket tartalmazhat</li>
           <li>szóköz, és egyéb különleges karakterek nem használhatóak</li>
-        </ul-->
+        </ul>
       </div>
       <div>
         <input type="text" id="firstName" placeholder=" " required pattern="[A-Za-zÁáÉéÍíÓóÖöŐőÚúÜüŰű\- ]+">
