@@ -1,4 +1,32 @@
+function start() {
+  age = document.getElementsByTagName("input")[2];
+  ul = document.getElementsByTagName("ul")[0];
+  age.setCustomValidity("<li>Nem lesz jó a kor.</li>");
+  ul.append(age.validationMessage);
+  ul.append(age.reportValidity());
+  age.addEventListener("input", val);
 
+}
+
+function val() {
+  ul.append(age.checkValidity());
+}
+
+const nameInput = document.querySelector('input');
+
+nameInput.addEventListener('input', () => {
+  nameInput.setCustomValidity('');
+  nameInput.checkValidity();
+});
+
+nameInput.addEventListener('invalid', () => {
+  if (nameInput.value === '') {
+    nameInput.setCustomValidity('Enter your username!');
+  } else {
+    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+  }
+});
+window.addEventListener("load", start);
 
 // function myFunction() {
 //   // Get the value of the input field with id="numb"
