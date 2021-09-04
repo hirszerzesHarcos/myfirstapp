@@ -1,18 +1,20 @@
 function start() {
-  age = document.getElementsByTagName("input")[2];
-  ul = document.getElementsByTagName("ul")[0];
-  age.setCustomValidity("<li>Nem lesz jó a kor.</li>");
-  ul.append(age.validationMessage);
-  ul.append(age.reportValidity());
-  age.addEventListener("input", val);
+  const inputs = document.querySelectorAll('input');
+  inputs.forEach(inputValidation);
+  /*  age = document.getElementsByTagName("input")[2];
+    ul = document.getElementsByTagName("ul")[0];
+    age.setCustomValidity("<li>Nem lesz jó a kor.</li>");
+    ul.append(age.validationMessage);
+    ul.append(age.reportValidity());
+    age.addEventListener("input", val);*/
 
 }
 
-function val() {
+/*function val() {
   ul.append(age.checkValidity());
-}
+}*/
 
-const nameInput = document.querySelector('input');
+/*const nameInput = document.querySelector('input');
 
 nameInput.addEventListener('input', () => {
   nameInput.setCustomValidity('');
@@ -25,7 +27,33 @@ nameInput.addEventListener('invalid', () => {
   } else {
     nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
   }
-});
+});*/
+
+
+
+/*const form = document.querySelector('form');*/
+
+
+function inputValidation(input) {
+  input.addEventListener("input", validityCheck);
+}
+
+function validityCheck(event) {
+  console.log(event.target.validity.valid);
+}
+/*input.oninvalid = (e) => {
+  document.getElementById(`${e.target.id}-error`).removeAttribute('hidden');
+}
+})form.onsubmit = (e) => {
+console.log(e);
+e.preventDefault();
+}
+numbers.forEach(myFunction);
+
+function myFunction(item) {
+sum += item;
+}*/
+
 window.addEventListener("load", start);
 
 // function myFunction() {
