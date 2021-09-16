@@ -93,6 +93,41 @@ div, .box input:not([type="checkbox"]) {
   font-size: 10px;
 }
 
+.box div>.tooltipText {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 7px);
+  z-index: 1;
+  filter: drop-shadow( 0 0 2px rgba(242, 4, 52, .8)) drop-shadow( 0 0 5px rgba(242, 4, 52, .8)) drop-shadow( 0 5px 15px #000);
+}
+
+.box div>.tooltipText>span {
+  display: block;
+  background-color: #000;
+  color: #f20434;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  /*box-shadow: 0 15px 25px rgba(0, 0, 0, .5);*/
+}
+
+.box div>.tooltipText>span:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  bottom: calc(100% - 5px);
+  left: 50%;
+  background-color: #000;
+}
+
+.box div>input:hover:invalid~.tooltipText, .box div>input:focus:invalid~.tooltipText {
+  visibility: visible;
+}
+
 .box div>input:focus+label, .box div>input:hover+label, .box div>input:not(:placeholder-shown)+label {
   top: -18px;
   font-size: 12px;
